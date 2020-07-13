@@ -1,0 +1,389 @@
+doctype html
+meta(name="charset", content="utf-8")
+html
+    head
+        title Step 2 - Generate Domains
+        link(rel="stylesheet" href="/external/fontawesome/css/all.css")
+        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/step2.css")
+        script(src="/external/jquery-3.4.1.js")
+        script(src="/scripts/step2.js")
+
+    body
+        div#content
+            h1 Step 2 - Create Maliciously Looking Domains
+            div#info_text
+                p
+                    i.fas.fa-info-circle
+                    |
+                    | Instructions:
+                ul
+                    li
+                        | Attackers use various techniques to create domains which are similar to well-known domains.
+                    li
+                        | In this experiment, we ask you to think like an attacker and create ten domains that are well-suited, e.g., for phishing.
+                    li
+                        | First, we select a well-known domain you should impersonate.
+                    li
+                        | Second, please select a technique to create your impersonated domain.
+
+            div#status
+                <i class="fas fa-list-ol"></i>
+                |
+                |
+                span#counter #{counter}
+                | /10 domains created
+
+            div#already_created
+                if already_created_domains.length > 0
+                    p Already created:
+                        ul
+                            each domain in already_created_domains
+                                li #{domain}
+
+            div#error_message
+                p
+                    i.fas.fa-exclamation-circle
+                    |
+                    | You already created this domain or the created domain is the same as the well-known domain. Create a different one!
+                    |
+                    i.fas.fa-exclamation-circle
+
+            div#domain_selection
+                p Please impersonate the following domain:
+                div#selected_domain
+
+            div#start
+                i.fas.fa-play-circle
+                br
+                | Start
+
+            div#step2_experiment     
+                div#squatting_technique_selection
+                    p Select a technique you would like to use (You get a description for each technique if you click on it).
+                    div#squatting_techniques
+                        div.unselected.label.squatting_technique#typosquatting_link(href="#/") Typosquatting
+                        div.unselected.label.squatting_technique#combosquatting_link(href="#/") Combosquatting
+                        div.unselected.label.squatting_technique#subdomain_usage_link(href="#/") Subdomain usage
+                        div.unselected.label.squatting_technique#wrong_tld_link(href="#/") Wrong top-level domain
+                        div.unselected.label.squatting_technique#homograph_link(href="#/") Homograph
+
+                div#squatting_techniques_wrapper
+                    div#typosquatting
+                        div.description
+                            b Typosquatting:
+                            |
+                            | the domain has a typing error, e.g., e
+                            span.red x
+                            | xample.com instead of example.com
+                        div#typosquatting_technique_selection
+                            p Select a typosquatting technique you would like to use:
+                            div#typosquatting_techniques
+                                div.unselected.label(href="#/") Prepend www
+                                div.unselected.label(href="#/") Omit character
+                                div.unselected.label(href="#/") Swap characters
+                                div.unselected.label(href="#/") Replace qwerty
+                                div.unselected.label(href="#/") Duplicate character
+                        div#typosquatting_techniques_wrapper
+                            div#prepend_www
+                                div.description
+                                    b Prepend www:
+                                    |
+                                    | missing dot between www and domain, e.g.,
+                                    |
+                                    span.red www
+                                    | example.com.
+                                p
+                                    | You will create:
+                                    span#prepend_www_created_domain
+                                a#next_domain_prepend_www(href="#/")
+                                    i.fas.fa-forward(aria-hidden='true')
+                                    |
+                                    | Click to create this domain
+                
+                            div#omit_character
+                                div.description
+                                    b Omit character:
+                                    |
+                                    | omit a character, e.g., eample.com.
+                                p Select a character to remove:
+                                div#omit_character_domain_letters
+                                div#omit_character_success
+                                    p
+                                        | You will create:
+                                        span#omit_character_created_domain
+                                    a#next_domain_omit_character(href="#/")
+                                        i.fas.fa-forward(aria-hidden='true')
+                                        |
+                                        | Click to create this domain
+                
+                            div#swap_characters
+                                div.description
+                                    b Swap characters:
+                                    |
+                                    | swap two neighboring characters, e.g., e
+                                    span.red ax
+                                    | mple.com.
+                                p Select a character to swap with its right neighbor (swapping the last character is equal to swapping the second to last character):
+                                div#swap_characters_domain_letters
+                                div#swap_characters_success
+                                    p 
+                                        | You will create:
+                                        span#swap_characters_created_domain
+                                    a#next_domain_swap_characters(href="#/")
+                                        i.fas.fa-forward(aria-hidden='true')
+                                        |
+                                        | Click to create this domain
+                
+                            div#replace_qwerty
+                                div.description
+                                    b Replace qwerty:
+                                    |
+                                    | replace a character with a neighboring character on a qwerty keyboard, e.g., ex
+                                    span.red s
+                                    | mple.com.
+                                p Select a character to replace:
+                                div#replace_qwerty_domain_letters
+                                div#qwerty_replacements
+                                div#replace_qwerty_success
+                                    p
+                                        | You will create:
+                                        span#replace_qwerty_created_domain
+                                    a#next_domain_replace_qwerty(href="#/")
+                                        i.fas.fa-forward(aria-hidden='true')
+                                        |
+                                        | Click to create this domain
+                
+                            div#duplicate_character
+                                div.description
+                                    b Duplicate character:
+                                    |
+                                    | duplicate a character, e.g., e
+                                    span.red x
+                                    | xample.com.
+                                p Select a character to duplicate:
+                                div#duplicate_character_domain_letters
+                                div#duplicate_character_success
+                                    p
+                                        | You will create:
+                                        span#duplicate_character_created_domain
+                                    a#next_domain_duplicate_character(href="#/")
+                                        i.fas.fa-forward(aria-hidden='true')
+                                        |
+                                        | Click to create this domain
+            
+                    div#combosquatting
+                        div.description
+                            b Combosquatting:
+                            |
+                            | the domain has random characters or suitable terms in front of and/or behind the well-known domain, e.g.,
+                            |
+                            span.red login-
+                            | example.com.
+                        ul
+                            li
+                                | Click on the
+                                |
+                                i.fas.fa-random
+                                |
+                                | button to add random characters before/behind the well-known domain.
+                            li
+                                | Click on the
+                                |
+                                i.fas.fa-book
+                                |
+                                | button to add a suitable term before/behind the well-known domain.
+                            li
+                                | Click on the
+                                |
+                                i.fas.fa-times-circle
+                                |
+                                | button if you do not want to add characters/terms before/behind the well-known domain.
+                            li
+                                | You must add characters/terms either before or behind the well-known domain.
+                        div#create_combosquatting_domain_before
+                            b Before the well-known domain
+                            br
+                            div#chars_before
+                                i.fas.fa-random
+                                br
+                                | Characters
+                            div#terms_before
+                                i.fas.fa-book
+                                br
+                                | Terms
+                            div#none_before
+                                i.fas.fa-times-circle
+                                br
+                                | None
+                        div#create_combosquatting_domain_behind
+                            b Behind the well-known domain
+                            br
+                            div#chars_behind
+                                i.fas.fa-random
+                                br
+                                | Characters
+                            div#terms_behind
+                                i.fas.fa-book
+                                br
+                                | Terms
+                            div#none_behind
+                                i.fas.fa-times-circle
+                                br
+                                | None
+                        div#combosquatting_error
+                            p
+                                i.fas.fa-exclamation-circle
+                                |
+                                | You cannot select none for both before and behind the well-known domain
+                                |
+                                i.fas.fa-exclamation-circle
+                        div#combosquatting_success
+                            p
+                                | You will create:
+                                |
+                                span#combosquatting_created_domain
+                                |.
+                            a#next_domain_combosquatting(href="#/")
+                                i.fas.fa-forward(aria-hidden='true')
+                                |
+                                | Click to create this domain
+            
+                    div#subdomain_usage
+                        div.description
+                            b Subdomain usage:
+                            |
+                            | the well-known domain is a subdomain of another, unsuspiciously looking, domain, e.g., example.com
+                            span.red .another-domain.com
+                            | .
+                        ul
+                            li
+                                | Click on the
+                                |
+                                i.fas.fa-random
+                                |
+                                | button to add random characters before/behind the well-known domain.
+                            li
+                                | Click on the
+                                |
+                                i.fas.fa-book
+                                |
+                                | button to add a suitable term before/behind the well-known domain.
+                            li
+                                | Click on the
+                                |
+                                i.fas.fa-times-circle
+                                |
+                                | button if you do not want to add characters/terms before/behind the well-known domain.
+                            li
+                                | You do not have to add characters or terms before or behind the well-known domain.
+                            li
+                                | We automatically choose test-domain.com as unsuspiciously looking domain.
+                        div#create_subdomain_before
+                            b Before the well-known domain
+                            br
+                            div#subdomain_chars_before
+                                i.fas.fa-random
+                                br
+                                | Characters
+                            div#subdomain_terms_before
+                                i.fas.fa-book
+                                br
+                                | Terms
+                            div#subdomain_none_before
+                                i.fas.fa-times-circle
+                                br
+                                | None
+                        div#create_subdomain_behind
+                            b Behind the well-known domain
+                            br
+                            div#subdomain_chars_behind
+                                i.fas.fa-random
+                                br
+                                | Characters
+                            div#subdomain_terms_behind
+                                i.fas.fa-book
+                                br
+                                | Terms
+                            div#subdomain_none_behind
+                                i.fas.fa-times-circle
+                                br
+                                | None
+                        div#subdomain_success
+                            p
+                                | You will create:
+                                |
+                                span#subdomain_created_domain
+                            a#next_domain_subdomain(href="#/")
+                                i.fas.fa-forward(aria-hidden='true')
+                                |
+                                | Click to create this domain
+            
+                    div#wrong_tld
+                        div.description
+                            b Wrong top-level domain:
+                            |
+                            | the domain has a different top-level domain compared to the original domain, e.g., example.
+                            span.red top
+                            | .
+                        p Choose a top-level domain from the list below:
+                        div#create_wrong_tld
+                            div#dropdown_wrapper_wrong_tld
+                                button#wrong_tld_selection_button
+                                    i.fas.fa-caret-down
+                                    |
+                                    | Click to select top-level domain
+                                div#dropdown_content_wrong_tld
+                                    a(href="#/") top
+                                    a(href="#/") md
+                                    a(href="#/") net
+                                    a(href="#/") de
+                        div#wrong_tld_success
+                            p
+                                | You will create:
+                                |
+                                span#wrong_tld_created_domain
+                            a#next_domain_wrong_tld(href="#/")
+                                i.fas.fa-forward(aria-hidden="true")
+                                |
+                                | Click to create this domain
+            
+                    div#homograph
+                        div.description
+                            b Homograph:
+                            |
+                            | the domain has a character replaced with a similar looking Unicode character, e.g.,
+                            |
+                            span.red ẹ
+                            | xample.com.
+                            |
+                            | Unicode is an international standard which determines a digital code for each known character.
+                            |
+                            | In this context, you just replace one character with a similar looking character and do not have to worry about the technical details.
+                        p Select a character to replace:
+                        div#replace_homograph_domain_letters
+                        div#homograph_replacements
+                        div#replace_homograph_success
+                            p
+                                | You will create:
+                                span#replace_homograph_created_domain
+                            a#next_domain_replace_homograph(href="#/")
+                                i.fas.fa-forward(aria-hidden='true')
+                                |
+                                | Click to create this domain
+
+            div#continue_to_next_domain
+                p#continue_to_next_domain_info Thank you for creating the domain!
+                a.link_to_next_domain(href="/step2/user_id/" + user_id)
+                    i.fas.fa-forward(aria-hidden='true')
+                    |
+                    | Continue to next domain
+        
+            div#continue
+                p#continue_info Thank you for creating the domains!
+                a.link_to_step3(href="/step3/user_id/" + user_id)
+                    i.fas.fa-forward(aria-hidden='true')
+                    |
+                    | Continue to step 3
+
+            div.user_id #{user_id}

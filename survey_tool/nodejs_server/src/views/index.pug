@@ -1,0 +1,97 @@
+doctype html
+meta(name="charset", content="utf-8")
+html
+    head
+        title Domain Experiment
+        link(rel="stylesheet" href="/external/fontawesome/css/all.css")
+        link(rel="stylesheet" href="/css/style.css")
+
+    body
+        div#content
+            h1 Introduction and Disclaimer
+            div#disclaimer_text
+                p
+                    b 
+                        | General
+                    br
+                    | This survey is conducted by the Chair for Systems Security at the Ruhr-University Bochum.
+                p
+                    b
+                        | Purpose
+                    br
+                    | A domain is a name enabling users to access websites.
+                    | Attackers use malicious domains, for example, to lure victims on phishing websites.
+                    | The purpose of this study is to test participants' understanding of such malicious domains.
+                p
+                    b
+                        | Participation requirements
+                    br
+                    | Participants who are at least
+                    |
+                    b
+                        | 18 years old
+                    |
+                    | are eligible to participate.
+                p
+                    b
+                        | Procedure
+                    br
+                    | Participants have to perform some experiments in which they evaluate and create domains.
+                    | In the last part, participants may answer some demographic questions and questions about their security awareness.
+                p
+                    b
+                        | Data Privacy
+                    br
+                    | In this survey you will be asked to answer some personal questions about your age, gender and education level.
+                    | Additionally, we collect information about the device you are using and the time it takes to complete the survey and answer the questions.
+                    | The repsonses will be stored together with a unique, pseudonymous user ID that is not associated with any identifying information (we do not ask for your name or contact data).
+                    | Your answers will be stored on a server hosted by the
+                    |
+                    b
+                        | Chair for Systems Security
+                    |
+                    | at the
+                    |
+                    b
+                        | Ruhr-University Bochum
+                    |
+                    | in Germany that uses state of the art security mechanisms for encrypted data transfer. Data will be shared with selected researchers that have signed confidentiality agreements.
+                    br
+                    | You can find contact information of the responsible
+                    |
+                    b
+                        | data protection officer
+                    |
+                    | at
+                    |
+                    a(href="https://dsb.ruhr-uni-bochum.de/") https://dsb.ruhr-uni-bochum.de/
+                    | .
+                p
+                    b
+                        | Voluntary Participation
+                    br
+                    | Your participation in this research is voluntary.
+                    | You may discontinue participation at any time during the research.
+                p
+                    b
+                        | Right to Ask Questions and Contact Information
+                    br
+                    | If you have any questions, comments, or concerns about the study, either before, during, or after participation, please contact me at
+                    |
+                    a(href="mailto:phishing-survey@ruhr-uni-bochum.de") phishing-survey@ruhr-uni-bochum.de
+                    | . Also contact this e-mail address with any requests regarding your privacy rights including the objecting to processing, deletion of data and access to the data stored about you. 
+                    | Please note that we might require additional information to re-identify the data set that contains your information.
+
+            div#agreement_text
+                p
+                    i.fas.fa-exclamation-circle
+                    |
+                    |
+                    b
+                        | By clicking the button below, you confirm that you are at least 18 years old, have read and understand the previous information, and want to participate in this research study.
+    
+            div#continue_to_step1
+                a.link_to_step1(href="/step1/user_id/" + user_id)
+                    i.fas.fa-forward(aria-hidden='true')
+                    |
+                    | Agree & continue to step 1

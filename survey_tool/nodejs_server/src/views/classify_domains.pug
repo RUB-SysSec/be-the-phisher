@@ -1,0 +1,77 @@
+doctype html
+meta(name="charset", content="utf-8")
+html
+    head
+        block title
+        link(rel="stylesheet" href="/external/fontawesome/css/all.css")
+        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/classify_domains.css")
+        script(src="/external/jquery-3.4.1.js")
+        script(src="/scripts/classify_domains.js")
+
+    body
+        div#content
+            block headline
+            div#info_text
+                p
+                    i.fas.fa-info-circle
+                    |
+                    | Instructions:
+                ul
+                    block instructions
+                    li
+                        | Click on the
+                        |
+                        i.green.fas.fa-check-circle
+                        |
+                        | button to classify a domain as benign, i.e., if you think it belongs to the given brand.
+                    li
+                        | Click on the
+                        |
+                        i.red.fas.fa-times-circle
+                        |
+                        | button to classify a domain as malicious, i.e., if you think the brand was used to create a domain similar to a well-known one.
+                    li
+                        b Please do not access the displayed domains because they might host malicious content.
+                    li
+                        | Please classify as many domains as possible within 120 seconds.
+                    li
+                        | Click on the
+                        |
+                        i.fas.fa-play-circle
+                        |
+                        | button to start the experiment.
+    
+            div#start
+                i.fas.fa-play-circle
+                br
+                | Start
+
+            div#experiment
+                div#timer
+                    p
+                        i.time_symbol.fas.fa-stopwatch
+                        |
+                        |
+                        span#current_time 120
+                        |
+                        | seconds left
+            
+                div#domain
+            
+                div#navi
+                    div#ben
+                        i.fas.fa-check-circle
+                        br
+                        | Benign
+                    div#mal
+                        i.fas.fa-times-circle
+                        br
+                        | Malicious
+    
+            div#continue
+                p#continue_info The time is up!
+                block continue_link
+
+            div.user_id #{user_id}
+            div.step_id #{step_id}

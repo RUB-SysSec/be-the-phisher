@@ -1,0 +1,63 @@
+#experiment {
+    display: none;
+}
+
+#mal,
+#ben,
+#start {
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 80px;
+}
+
+#mal i {
+    color: #D2222D;
+}
+
+#ben i {
+    color: #007000;
+}
+
+#start:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#mal:hover,
+#mal:hover i {
+    background-color: #D2222D;
+    color: white;
+}
+
+#ben:hover,
+#ben:hover i {
+    background-color: #007000;
+    color: white;
+}
+
+.benKeypressed {
+    background-color: #007000;
+    color: white;
+}
+
+.malKeypressed {
+    background-color: #D2222D;
+    color: white;
+}
+
+#timer,
+#domain,
+#navi {
+    margin-top: 1em;
+}
+
+.time_symbol,
+#current_time,
+#domain {
+    font-weight: bold;
+    font-size: 1.2em;
+}

@@ -1,0 +1,101 @@
+doctype html
+meta(name="charset", content="utf-8")
+html
+    head
+        title Final notes
+        link(rel="stylesheet" href="/external/fontawesome/css/all.css")
+        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/final_notes.css")
+
+    body
+        div#content
+            h1 Final notes
+            p
+                | Thank you for participating in this experiment.
+                | Please use the following completion code at Mechanical Turk to show that you finished the survey and redeem your credits:
+                br
+                br
+                if completionCode == "-1"
+                    span.red
+                        i.fas.fa-exclamation-circle
+                        |
+                        | You did not finish all experiments!
+                        |
+                        i.fas.fa-exclamation-circle
+                    br
+                    | Please finish the following experiments first:
+                    br
+                    ul
+                        if finished_step1 == "0"
+                            li
+                                a(href="/step1/user_id/" + user_id) Step 1
+                        if finished_step2 == "0"
+                            li
+                                a(href="/step2/user_id/" + user_id) Step 2
+                        if finished_step3 == "0"
+                            li
+                                a(href="/step3/user_id/" + user_id) Step 3
+                        if finished_step4 == "0"
+                            li
+                                a(href="/step4/user_id/" + user_id) Step 4
+                        if finished_questionnaire == "0"
+                            li
+                                a(href="/questionnaire/user_id/" + user_id) Questionnaire
+                else
+                    b
+                        | #{completionCode}
+                    br
+                br
+                | You can now leave the page or close the browser.
+                | Below you find the domains you did not classify correctly in the step 1 and step 4 experiments.
+
+            h2 Step 1
+            if step1Results.length > 0
+                table
+                    tr
+                        th Domain
+                        th Your classification
+                        th Correct classification
+                    each result in step1Results
+                        tr
+                            td #{result["domain"]}
+                            if result["result"] == "0"
+                                td
+                                    i.green.fas.fa-check-circle
+                            else
+                                td
+                                    i.red.fas.fa-times-circle
+                            if result["classification"] == "0"
+                                td
+                                    i.green.fas.fa-check-circle
+                            else
+                                td
+                                    i.red.fas.fa-times-circle
+            else
+                i All domains classified correctly.
+
+
+            h2 Step 4
+            if step4Results.length > 0
+                table
+                    tr
+                        th Domain
+                        th Your classification
+                        th Correct classification
+                    each result in step4Results
+                        tr
+                            td #{result["domain"]}
+                            if result["result"] == "0"
+                                td
+                                    i.green.fas.fa-check-circle
+                            else
+                                td
+                                    i.red.fas.fa-times-circle
+                            if result["classification"] == "0"
+                                td
+                                    i.green.fas.fa-check-circle
+                            else
+                                td
+                                    i.red.fas.fa-times-circle
+            else
+                i All domains classified correctly.

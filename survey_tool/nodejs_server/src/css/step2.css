@@ -1,0 +1,217 @@
+#step2_experiment {
+    display: none;
+}
+
+#start {
+    display: none;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 80px;
+}
+
+#start:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#status {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+#selected_domain {
+    font-size: 1.2em;
+}
+
+#domain_selection {
+    margin-top: 1em;
+}
+
+#wrong_tld_selection_button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+#dropdown_wrapper_wrong_tld {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown_content_wrong_tld {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    border: 2px solid black;
+    background-color: white;
+    margin-left: 0.5em;
+}
+
+#dropdown_content_wrong_tld a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 0.5em;
+}
+
+#dropdown_content_wrong_tld a:hover {
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+}
+
+#squatting_technique_selection {
+    margin-top: 1em;
+    display: block;
+}
+
+#squatting_techniques div {
+    text-decoration: none;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#squatting_techniques div:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+#typosquatting,
+#combosquatting,
+#subdomain_usage,
+#wrong_tld,
+#homograph {
+    margin-top: 2em;
+    display: none;
+}
+
+#typosquatting_techniques div {
+    text-decoration: none;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#typosquatting_techniques div:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+#prepend_www,
+#omit_character,
+#swap_characters,
+#replace_qwerty,
+#duplicate_character {
+    margin-top: 1em;
+    display: none;
+}
+
+#create_combosquatting_domain_behind,
+#create_subdomain_behind {
+    display: none;
+}
+
+#omit_character_domain_letters,
+#swap_characters_domain_letters,
+#replace_qwerty_domain_letters,
+#duplicate_character_domain_letters,
+#qwerty_replacements,
+#replace_homograph_domain_letters,
+#homograph_replacements {
+    margin-top: 1em;
+}
+
+#omit_character_domain_letters div,
+#swap_characters_domain_letters div,
+#replace_qwerty_domain_letters div,
+#duplicate_character_domain_letters div,
+#qwerty_replacements div,
+#replace_homograph_domain_letters div,
+#homograph_replacements div {
+    /*text-decoration: none;*/
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#omit_character_domain_letters div:hover,
+#swap_characters_domain_letters div:hover,
+#replace_qwerty_domain_letters div:hover,
+#duplicate_character_domain_letters div:hover,
+#qwerty_replacements div:hover,
+#replace_homograph_domain_letters div:hover,
+#homograph_replacements div:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+#omit_character_success,
+#swap_characters_success,
+#replace_qwerty_success,
+#duplicate_character_success,
+#combosquatting_success,
+#combosquatting_error,
+#subdomain_success,
+#wrong_tld_success,
+#replace_homograph_success {
+    margin-top: 1em;
+    display: none;
+}
+
+#chars_before,
+#terms_before,
+#none_before,
+#chars_behind,
+#terms_behind,
+#none_behind,
+#subdomain_chars_before,
+#subdomain_terms_before,
+#subdomain_none_before,
+#subdomain_chars_behind,
+#subdomain_terms_behind,
+#subdomain_none_behind {
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 100px;
+}
+
+#chars_before:hover,
+#terms_before:hover,
+#none_before:hover,
+#chars_behind:hover,
+#terms_behind:hover,
+#none_behind:hover,
+#subdomain_chars_before:hover,
+#subdomain_terms_before:hover,
+#subdomain_none_before:hover,
+#subdomain_chars_behind:hover,
+#subdomain_terms_behind:hover,
+#subdomain_none_behind:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.unselected {
+    color: black;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.letter {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border-radius: 20px;
+}

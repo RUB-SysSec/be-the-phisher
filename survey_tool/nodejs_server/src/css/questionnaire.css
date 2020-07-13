@@ -1,0 +1,8 @@
+#send_questionnaire_wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+div#phishing_description {
+	display: none;
+}

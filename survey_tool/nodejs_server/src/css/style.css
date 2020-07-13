@@ -1,0 +1,119 @@
+html {
+    font-family: Helvetica, Arial, Geneva, sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+a {
+    color: black;
+}
+
+.user_id, .step_id {
+    display: none;
+}
+
+#content {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 1em;
+}
+
+#info_text {
+    margin-top: 1em;
+}
+
+#info_text p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#disclaimer_text {
+    margin-top: 1em;
+}
+
+#agreement_text {
+    margin-top: 2em;
+}
+
+#continue, #continue_to_next_domain {
+    margin-top: 1em;
+    display: none;
+}
+
+#continue_to_step1 {
+    margin-top: 2em;
+}
+
+.red {
+    color: #D2222D;
+}
+
+.green {
+    color: #007000;
+}
+
+.label {
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 20px;
+}
+
+.link_to_index,
+.link_to_step1,
+.link_to_step2,
+.link_to_next_domain,
+.link_to_step3,
+.link_to_step4,
+.link_to_questionnaire,
+.send_questionnaire,
+.link_to_final_notes,
+#next_domain_prepend_www,
+#next_domain_omit_character,
+#next_domain_swap_characters,
+#next_domain_replace_qwerty,
+#next_domain_duplicate_character,
+#next_domain_combosquatting,
+#next_domain_subdomain,
+#next_domain_wrong_tld,
+#next_domain_replace_homograph {
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 20px;
+}
+
+.link_to_index:hover,
+.link_to_step1:hover,
+.link_to_step2:hover,
+.link_to_next_domain:hover,
+.link_to_step3:hover,
+.link_to_step4:hover,
+.link_to_questionnaire:hover,
+.send_questionnaire:hover,
+.link_to_final_notes:hover,
+#next_domain_prepend_www:hover,
+#next_domain_omit_character:hover,
+#next_domain_swap_characters:hover,
+#next_domain_replace_qwerty:hover,
+#next_domain_duplicate_character:hover,
+#next_domain_combosquatting:hover,
+#next_domain_subdomain:hover,
+#next_domain_wrong_tld:hover,
+#next_domain_replace_homograph:hover {
+    color: white;
+    background-color: black;
+}
+
+#error_message {
+    color: #D2222D;
+    display: none;
+}
+
+input[type="radio"] {
+    vertical-align: sub;
+}

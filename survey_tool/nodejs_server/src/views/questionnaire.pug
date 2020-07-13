@@ -1,0 +1,517 @@
+doctype html
+meta(name="charset", content="utf-8")
+html
+    head
+        title Questionnaire
+        link(rel="stylesheet" href="/external/fontawesome/css/all.css")
+        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/questionnaire.css")
+        script(src="/external/jquery-3.4.1.js")
+        script(src="/scripts/questionnaire.js")
+
+    body
+        div#content
+            h1 Questionnaire
+            p Finally, we want to ask some questions about you and your experience to better understand your decisions.
+    
+            h2 1. Demographic
+    
+            div#age
+                p 1.1. What is your age?
+                input(type="radio" name="age" value="18_25")
+                |
+                | 18 - 25
+                input(type="radio" name="age" value="26_35")
+                |
+                | 26 - 35
+                input(type="radio" name="age" value="36_45")
+                |
+                | 36 - 45
+                input(type="radio" name="age" value="46_55")
+                |
+                | 46 - 55
+                input(type="radio" name="age" value="over_55")
+                |
+                | Over 55
+                input(type="radio" name="age" value="not_answer")
+                |
+                | I prefer not to answer
+
+            div#gender
+                p 1.2. What is your gender?
+                input(type="radio" name="gender" value="male")
+                |
+                | Male
+                input(type="radio" name="gender" value="female")
+                |
+                | Female
+                input(type="radio" name="gender" value="non_binary")
+                |
+                | Non-binary/third gender
+                input(type="radio" name="gender" value="other")
+                |
+                | Other
+                input(type="radio" name="gender" value="not_answer")
+                |
+                | I prefer not to answer
+
+            div#education
+                p 1.3. What is your highest qualification?
+                input(type="radio" name="education" value="less_high_school")
+                |
+                | Less than high school diploma
+                br
+                input(type="radio" name="education" value="high_school")
+                |
+                | High school diploma or equivalent
+                br
+                input(type="radio" name="education" value="no_degree")
+                |
+                | No degree
+                br
+                input(type="radio" name="education" value="bachelor")
+                |
+                | Bachelor's degree
+                br
+                input(type="radio" name="education" value="master")
+                |
+                | Master's degree
+                br
+                input(type="radio" name="education" value="over_master")
+                |
+                | Higher than master's degree (e.g., PhD)
+                br
+                input(type="radio" name="education" value="not_answer")
+                |
+                | I prefer not to answer
+
+            div#origin
+                p 1.4. What is your continent of residency?
+                input(type="radio" name="origin" value="north_america")
+                |
+                | North America
+                input(type="radio" name="origin" value="south_america")
+                |
+                | South America
+                input(type="radio" name="origin" value="europe")
+                |
+                | Europe
+                input(type="radio" name="origin" value="africa")
+                |
+                | Africa
+                input(type="radio" name="origin" value="asia")
+                |
+                | Asia
+                input(type="radio" name="origin" value="australia")
+                |
+                | Australia
+                input(type="radio" name="origin" value="antarctica")
+                |
+                | Antarctica
+
+            h2 2. Computer Usage
+
+            div#f4
+                p 2.1. I set my computer screen to automatically lock if I don't use it for a prolonged period of time.
+                input(type="radio" name="f4" value="never")
+                |
+                | Never
+                input(type="radio" name="f4" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f4" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f4" value="often")
+                |
+                | Often
+                input(type="radio" name="f4" value="always")
+                |
+                | Always
+
+            div#f6
+                p 2.2. I use a password/passcode to unlock my laptop or tablet.
+                input(type="radio" name="f6" value="never")
+                |
+                | Never
+                input(type="radio" name="f6" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f6" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f6" value="often")
+                |
+                | Often
+                input(type="radio" name="f6" value="always")
+                |
+                | Always
+
+            div#attention_test1
+                p 2.3. Please select Never from the five words.
+                input(type="radio" name="attention_test1", value="never")
+                |
+                | Never
+                input(type="radio" name="attention_test1", value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="attention_test1", value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="attention_test1", value="often")
+                |
+                | Often
+                input(type="radio" name="attention_test1", value="always")
+                |
+                | Always
+
+            div#f3
+                p 2.4. I manually lock my computer screen when I step away from it.
+                input(type="radio" name="f3" value="never")
+                |
+                | Never
+                input(type="radio" name="f3" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f3" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f3" value="often")
+                |
+                | Often
+                input(type="radio" name="f3" value="always")
+                |
+                | Always
+
+            div#f5
+                p 2.5. I use a PIN or passcode to unlock my mobile phone.
+                input(type="radio" name="f5" value="never")
+                |
+                | Never
+                input(type="radio" name="f5" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f5" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f5" value="often")
+                |
+                | Often
+                input(type="radio" name="f5" value="always")
+                |
+                | Always
+
+            div#f12
+                p 2.6. I do not change my passwords, unless I have to.
+                input(type="radio" name="f12" value="never")
+                |
+                | Never
+                input(type="radio" name="f12" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f12" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f12" value="often")
+                |
+                | Often
+                input(type="radio" name="f12" value="always")
+                |
+                | Always
+
+            div#f13
+                p 2.7. I use different passwords for different accounts that I have.
+                input(type="radio" name="f13" value="never")
+                |
+                | Never
+                input(type="radio" name="f13" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f13" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f13" value="often")
+                |
+                | Often
+                input(type="radio" name="f13" value="always")
+                |
+                | Always
+
+            div#f15
+                p 2.8. When I create a new online account, I try to use a password that goes beyond the site's minimum requirements.
+                input(type="radio" name="f15" value="never")
+                |
+                | Never
+                input(type="radio" name="f15" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f15" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f15" value="often")
+                |
+                | Often
+                input(type="radio" name="f15" value="always")
+                |
+                | Always
+
+            div#f14
+                p 2.9. I do not include special characters in my password if it's not required.
+                input(type="radio" name="f14" value="never")
+                |
+                | Never
+                input(type="radio" name="f14" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f14" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f14" value="often")
+                |
+                | Often
+                input(type="radio" name="f14" value="always")
+                |
+                | Always
+
+            div#f8
+                p 2.10. When someone sends me a link, I open it without first verifying where it goes.
+                input(type="radio" name="f8" value="never")
+                |
+                | Never
+                input(type="radio" name="f8" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f8" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f8" value="often")
+                |
+                | Often
+                input(type="radio" name="f8" value="always")
+                |
+                | Always
+
+            div#f11
+                p 2.11. I know what website I'm visiting based on its look and feel, rather than by looking at the URL bar.
+                input(type="radio" name="f11" value="never")
+                |
+                | Never
+                input(type="radio" name="f11" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f11" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f11" value="often")
+                |
+                | Often
+                input(type="radio" name="f11" value="always")
+                |
+                | Always
+
+            div#f16
+                p 2.12. I submit information to websites without first verifying that it will be sent securely (e.g., SSL, "https://", a lock icon).
+                input(type="radio" name="f16" value="never")
+                |
+                | Never
+                input(type="radio" name="f16" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f16" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f16" value="often")
+                |
+                | Often
+                input(type="radio" name="f16" value="always")
+                |
+                | Always
+
+            div#attention_test2
+                p 2.13. Please do not select Never from the five words.
+                input(type="radio" name="attention_test2" value="never")
+                |
+                | Never
+                input(type="radio" name="attention_test2" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="attention_test2" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="attention_test2" value="often")
+                |
+                | Often
+                input(type="radio" name="attention_test2" value="always")
+                |
+                | Always
+
+            div#f10
+                p 2.14. When browsing websites, I mouseover links to see where they go, before clicking them.
+                input(type="radio" name="f10" value="never")
+                |
+                | Never
+                input(type="radio" name="f10" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f10" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f10" value="often")
+                |
+                | Often
+                input(type="radio" name="f10" value="always")
+                |
+                | Always
+
+            div#f7
+                p 2.15. If I discover a security problem, I continue what I was doing because I assume someone else will fix it.
+                input(type="radio" name="f7" value="never")
+                |
+                | Never
+                input(type="radio" name="f7" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f7" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f7" value="often")
+                |
+                | Often
+                input(type="radio" name="f7" value="always")
+                |
+                | Always
+
+            div#f1
+                p 2.16. When I'm prompted about a software update, I install it right away.
+                input(type="radio" name="f1" value="never")
+                |
+                | Never
+                input(type="radio" name="f1" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f1" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f1" value="often")
+                |
+                | Often
+                input(type="radio" name="f1" value="always")
+                |
+                | Always
+
+            div#f2
+                p 2.17. I try to make sure that the programs I use are up-to-date.
+                input(type="radio" name="f2" value="never")
+                |
+                | Never
+                input(type="radio" name="f2" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f2" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f2" value="often")
+                |
+                | Often
+                input(type="radio" name="f2" value="always")
+                |
+                | Always
+
+            div#f9
+                p 2.18. I verify that my anti-virus software has been regularly updating itself.
+                input(type="radio" name="f9" value="never")
+                |
+                | Never
+                input(type="radio" name="f9" value="rarely")
+                |
+                | Rarely
+                input(type="radio" name="f9" value="sometimes")
+                |
+                | Sometimes
+                input(type="radio" name="f9" value="often")
+                |
+                | Often
+                input(type="radio" name="f9" value="always")
+                |
+                | Always
+
+            h2 3. Experience and Impact on Future Decisions
+
+            div#phishing
+                p 3.1. Have you ever been the victim of identity theft, e.g., a password has been stolen?
+                input(type="radio" name="phishing" value="yes")
+                |
+                | Yes
+                input(type="radio" name="phishing" value="no")
+                |
+                | No
+                input(type="radio" name="phishing" value="not_known")
+                |
+                | I do not know
+
+            div#phishing_description
+                p 3.1.a Please describe the type of identity theft (max. 500 characters).
+                textarea(rows="10" cols="50" name="phishing_description" maxlength="500")
+
+            div#phishing_training
+                p 3.2. Have you ever received formal phishing training, e.g., at your place of work?
+                input(type="radio" name="phishing_training" value="yes")
+                |
+                | Yes
+                input(type="radio" name="phishing_training" value="no")
+                |
+                | No
+                input(type="radio" name="phishing_training" value="not_known")
+                |
+                | I do not know
+
+            div#techniques
+                p 3.3. Have you been aware of the techniques mentioned in the step 2 experiment (e.g. typosquatting) to create domains before you took part in this experiment?
+                input(type="radio" name="techniques" value="yes")
+                |
+                | Yes
+                input(type="radio" name="techniques" value="no")
+                |
+                | No
+                input(type="radio" name="techniques" value="not_all")
+                |
+                | Not all, but at least one
+
+            div#future
+                p 3.4. Do you think the compilation of malicious domains (step 2 experiment) will help you to identify phishing domains in future?
+                input(type="radio" name="future" value="yes")
+                |
+                | Yes
+                input(type="radio" name="future" value="no")
+                |
+                | No
+                input(type="radio" name="future" value="not_known")
+                |
+                | I do not know
+
+            div#feedback
+                p 3.5. (Optional) If you want to provide feedback, you can use the free text field (max. 500 characters).
+                textarea(rows="10" cols="50" name="feedback" maxlength="500")
+
+            div#error_message
+                p
+                    i.fas.fa-exclamation-circle
+                    |
+                    | Missing answers! Please answer the red marked questions.
+                    |
+                    i.fas.fa-exclamation-circle
+
+            div#send_questionnaire_wrapper
+                a.send_questionnaire(href="#/")
+                    i.fas.fa-forward(aria-hidden='true')
+                    |
+                    | Submit questionnaire
+
+            div#continue
+                p#continue_info Thank you for answering the questions!
+                a.link_to_final_notes(href="/final_notes/user_id/" + user_id)
+                    i.fas.fa-forward(aria-hidden='true')
+                    |
+                    | Continue to final notes
+
+            div.user_id #{user_id}

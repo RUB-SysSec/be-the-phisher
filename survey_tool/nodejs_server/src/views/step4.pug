@@ -1,0 +1,17 @@
+extends classify_domains.pug
+
+block title
+    title Step 4 - Classify Domains into Benign and Malicious
+
+block headline
+    h1 Step 4 - Classify Domains into Benign and Malicious
+
+block append instructions
+    li
+        | Similar to the step 1 experiment, we ask you again to classify domains into benign and malicious.
+
+block append continue_link
+    a.link_to_questionnaire(href="/questionnaire/user_id/" + user_id)
+        i.fas.fa-forward(aria-hidden='true')
+        |
+        | Continue to questionnaire
